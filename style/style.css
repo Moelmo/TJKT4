@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header {
+    background-color: rgb(53, 52, 52);
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    padding: 15px;
+    font-family: cursive;
+}
+
+header h4 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header p {
+    margin: auto;
+    width: 80%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header .page {
+    justify-content: space-around;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 25px;
+}
+
+/* Gaya dasar untuk tautan header */
+header a {
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    color: #ff0000; /* Mengatur warna teks menjadi merah */
+    border: #ff0000 1px solid; /* Menambahkan border merah pada tautan */
+    padding: 15px; /* Menambahkan padding di sekitar teks */
+    display: inline-block; /* Memastikan padding dan animasi bekerja dengan baik */
+    transition: all 0.3s ease; /* Transisi halus untuk semua properti selama 0.3 detik */
+}
+
+/* Gaya untuk tautan saat di-hover */
+header a:hover {
+    color: #fff; /* Mengubah warna teks menjadi putih saat di-hover */
+    background: red; /* Mengubah warna latar belakang menjadi merah saat di-hover */
+}
+
+/* Animasi tambahan dengan keyframes */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Skala awal elemen */
+        background-color: red; /* Warna latar belakang awal */
+    }
+    50% {
+        transform: scale(1.1); /* Skala elemen menjadi lebih besar */
+        background-color: darkred; /* Warna latar belakang menjadi lebih gelap */
+    }
+    100% {
+        transform: scale(1); /* Kembali ke skala awal */
+        background-color: red; /* Warna latar belakang kembali ke merah */
+    }
+}
+
+/* Menerapkan animasi saat di-hover */
+header a:hover {
+    animation: pulse 0.6s ease-in-out; /* Menerapkan animasi pulse selama 0.6 detik */
+}
+
+#Jadwal h2 {
+    font-family:cursive;
+    font-weight: bold;
+    margin: 15px;
+}
+
+#Jadwal {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#jadwalA  {
+    background: #aeaeae;
+    color: #fff;
+    width: 80%;
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    margin: auto;
+
+}
+
+#jadwalA:hover {
+    color: red;
+    background-color: black;
+}
+
+.juduljadwal {
+    margin: 10px;
+    text-align: center;
+    font-family: cursive;
+}
+
+.jadwalborderA {
+    background: #aeaeaa;
+    margin: auto;
+    border: black 1px solid;
+    width: 85%;
+    padding-bottom: 15px;
+}
