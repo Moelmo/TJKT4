@@ -71,43 +71,80 @@ header a:hover {
     animation: pulse 0.6s ease-in-out; /* Menerapkan animasi pulse selama 0.6 detik */
 }
 
-#Jadwal h2 {
+#jadwal {
+    margin: auto;
+    width: 80%;
+}
+
+.jadwal {
+    border: black 1px solid;
+    padding: 5px;
+    background: #aeaeae;
+    text-align: justify;
+}
+
+.jadwal:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+.jadwal[open] {
+    background-color: black;
+    color: red;
+}
+
+#jadwal h2 {
+    text-align: center;
     font-family:cursive;
     font-weight: bold;
     margin: 15px;
 }
 
-#Jadwal {
-    margin-top: 20px;
+.teori h3, .praktek h3 {
     text-align: center;
+    font-family:cursive;
+    font-weight: bold;
+    margin: 15px;
 }
 
-#jadwalA  {
-    background: #aeaeae;
-    color: #fff;
-    width: 80%;
-    text-align: center;
-    padding: 5px;
-    display: flex;
-    margin: auto;
-
+/* Animasi fade-in untuk .jadwal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-#jadwalA:hover {
-    color: red;
-    background-color: black;
+/* Terapkan animasi pada elemen .jadwal */
+.jadwal {
+    opacity: 0; /* Awalnya tersembunyi */
+    animation: fadeIn 0.5s ease forwards; /* Terapkan animasi */
+    margin: 10px 0; /* Tambahkan margin untuk pemisah */
 }
 
-.juduljadwal {
-    margin: 10px;
-    text-align: center;
-    font-family: cursive;
+/* Menerapkan delay untuk setiap .jadwal */
+.jadwal:nth-child(1) {
+    animation-delay: 0.5s; /* Muncul setelah 0.5 detik */
 }
-
-.jadwalborderA {
-    background: #aeaeaa;
-    margin: auto;
-    border: black 1px solid;
-    width: 85%;
-    padding-bottom: 15px;
+.jadwal:nth-child(2) {
+    animation-delay: 1s; /* Muncul setelah 1 detik */
+}
+.jadwal:nth-child(3) {
+    animation-delay: 1.5s; /* Muncul setelah 1.5 detik */
+}
+.jadwal:nth-child(4) {
+    animation-delay: 2s; /* Muncul setelah 2 detik */
+}
+.jadwal:nth-child(5) {
+    animation-delay: 2.5s; /* Muncul setelah 2.5 detik */
+}
+.jadwal:nth-child(6) {
+    animation-delay: 3s; /* Muncul setelah 3 detik */
+}
+.jadwal:nth-child(7) {
+    animation-delay: 3.5s; /* Muncul setelah 3.5 detik */
 }
