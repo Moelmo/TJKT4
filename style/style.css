@@ -112,7 +112,7 @@ header a:hover {
 
 .teori h3, .praktek h3, .piket h3, .struktur h3 ,.gallery h3{
     text-align: center;
-    font-family:cursive;
+    font-family:Arial-Sans-Serif;
     font-weight: bold;
     margin: 15px;
 }
