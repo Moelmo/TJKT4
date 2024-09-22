@@ -83,6 +83,7 @@ header a:hover {
     text-align: justify;
 }
 
+
 .jadwal:hover {
     background-color: #ff0000;
     color: white;
@@ -93,6 +94,13 @@ header a:hover {
     color: red;
 }
 
+.terpilih {
+    background-color: #90ee90; /* Hijau untuk hari terpilih */
+}
+.tidak-terpilih {
+    background-color: #ff6347; /* Merah untuk hari tidak terpilih */
+}
+
 #jadwal h2 {
     text-align: center;
     font-family:cursive;
@@ -100,7 +108,7 @@ header a:hover {
     margin: 15px;
 }
 
-.teori h3, .praktek h3 {
+.teori h3, .praktek h3, .piket h3, .struktur h3{
     text-align: center;
     font-family:cursive;
     font-weight: bold;
@@ -147,4 +155,13 @@ header a:hover {
 }
 .jadwal:nth-child(7) {
     animation-delay: 3.5s; /* Muncul setelah 3.5 detik */
+}
+.jadwal:nth-child(8) {
+    animation-delay: 4s; /* Muncul setelah 3.5 detik */
+}
+.jadwal:nth-child(9) {
+    animation-delay: 4.5s; /* Muncul setelah 3.5 detik */
+}
+.jadwal:nth-child(10) {
+    animation-delay: 5s; /* Muncul setelah 3.5 detik */
 }
