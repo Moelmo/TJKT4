@@ -285,8 +285,8 @@ header a:hover {
 }
 
 .social-media-icons a img {
-    width: 150px;  /* Ukuran ikon */
-    height: 150px;
+    width: 75px;  /* Ukuran ikon */
+    height: 75px;
     transition: transform 0.3s;
 }
 
