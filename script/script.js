@@ -24,3 +24,15 @@ updateJadwal();
 
 // Mengatur interval untuk mengganti hari secara otomatis setiap 24 jam
 setInterval(updateJadwal, 24 * 60 * 60 * 1000); // 24 jam dalam milidetik
+
+// animasi muncul gambar struktur 
+/* document.addEventListener("scroll", function() {
+    const strukturElement = document.getElementById("Struktur");
+    const rect = strukturElement.getBoundingClientRect();
+
+    // Cek jika elemen terlihat di viewport
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+        strukturElement.classList.add("visible");
+    }
+}); */
+
