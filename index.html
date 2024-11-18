@@ -1,34 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN WEBSITE X TJKT 4</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>CLASS X-TJKT-4</title>
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
-    
-    <div class="login-container">
-        <h2>Login</h2>
-        <p>Selamat datang di website kelas X TJKT 4 SMKN 9 Surakarta</p>
-        <form id="loginForm">
-            <label for="nis">NIS (Nomor Induk Siswa):</label>
-            <input type="text" id="nis" placeholder="Masukkan NIS anda" required><br><br>
 
-            <button type="submit">Login</button>
-        </form>
-        <p id="errorMessage" style="color:red";></p>
-    </div>
 
-    <!-- modal loading -->
-    <div id="loadingModal" class="modal">
-        <div class="modal-content">
-            <p>Memuat...</p>
-            <div class="spinner"></div>
+    <header>
+        <div class="judul">
+        <h1>X-TJKT-4</h1>
+        <h4>Hallo Mahluk X-TJKT-4</h4>
+        <p>Selamat datang di website kelas 10 TJKT 4. Web ini berisi informasi tentang kelas, jadwal, foto kenangan, dan masih banyak lagi.</p>
         </div>
-    </div>
+        <nav class="page">
+            <a href="#jadwal">Jadwal</a>
+            <a href="#Struktur">Struktur</a>
+            <a href="#Gallery">Gallery</a>
+            <a href="#media">Media</a>
+        </nav>
 
-    <script src="js/login.js"></script>
+            <!-- welcome  -->
+        <!-- Latar belakang popup -->
+        <div id="popupBackground">
+            <div id="popupBox">
+                <h1>Selamat datang di halaman utama!</h1>
+                <p>Anda berhasil login dengan NIS yang terdaftar.</p>
+                <div class="button-group">
+                    <!-- Tombol Lanjutkan -->
+                    <button onclick="continueToPage()">Lanjutkan</button>
+                    <!-- Tombol Logout -->
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+
+
+    </header>
+
+    <main>
+
+        <section id="jadwal">
+
+            <h2>Jadwal X-TJKT-4</h2>
+
+            <div class="teori">
+                <h3>Jadwal Teori</h3>
+                <details class="jadwal" data-hari="1">
+                    <summary>Senin</summary>
+                        <p>SIN [Sejarah Indonesia]</p>
+                        <p>BIG [Bahasa Inggris]</p>
+                        <p>PAB [Pendidikan Agama]</p>
+                </details>
+                <details class="jadwal" data-hari="2">
+                    <summary>Selasa</summary>
+                        <p>MAT [Matematika]</p>
+                        <p>BJW [Bahasa Jawa]</p>
+                        <p>BIN [Bahasa Indonesia]</p>
+                </details>
+                <details class="jadwal" data-hari="3">
+                    <summary>Rabu</summary>
+                        <p>BIG [Bahasa Inggris]</p>
+                        <p>MAT [Matematika]</p>
+                        <p>SBU [Seni Budaya]</p>
+                </details>
+                <details class="jadwal" data-hari="4">
+                    <summary>Kamis</summary>
+                        <p>PJOK [Pendidikan Jasmani, Olahraga, dan Kesehatan]</p>
+                        <p>Jeda Kegiatan</p>
+                        <p>BIN [Bahasa Indonesia]</p>
+                        <p>PAB [Pendidikan Agama]</p>
+                </details>
+                <details class="jadwal" data-hari="5">
+                    <summary>Jum'at</summary>
+                        <p>Jum'at Karakter</p>
+                        <p>PJOK [Pendidikan Jasmani, Olahraga, dan Kesehatan]</p>
+                        <p>PKN [Pendidikan Kewarga Negaraan]</p>
+                </details>
+            </div>
+            <div class="praktek">
+                <h3>Jadwal Praktek</h3>
+                <details class="jadwal" data-hari="1">
+                    <summary>Senin</summary>
+                        <p>PKR [Penguatan Karakter][Upacara]</p>
+                        <p>DPK [Dasar Proggram Keahlian]</p>
+                        <p>BKS [Bimbinagan Konseling]</p>
+                        <p>DPK [Dasar Proggam Keahlian]</p>
+                </details>
+                <details class="jadwal" data-hari="2"> 
+                    <summary>Selasa</summary>
+                        <p>PAS [IPA IPS]</p>
+                        <p>P-5</p>
+                        <p>DPK [Dasar Proggam Keahlian]</p>
+                        <p>PAS [IPA IPS]</p>
+                </details>
+                <details class="jadwal" data-hari="3">
+                    <summary>Rabu</summary>
+                        <p>DPK [Dasar Proggam Keahlian]</p>
+                </details>
+                <details class="jadwal" data-hari="4">
+                    <summary>Kamis</summary>
+                        <p>DPK [Dasar Proggam Keahlian</p>
+                        <p>P-5</p>
+                        <p>INF [Informatika]]</p>
+                </details>
+                <details class="jadwal" data-hari="5">
+                    <summary>Jum'at</summary>
+                        <p>Jum'at Karakter</p>
+                        <p>INF [Informatika]</p>
+                        <p>PAS [IPA IPS]</p>
+                </details>
+            </div>
+            <div class="piket">
+                <h3>Jadwal Piket</h3>
+                <details class="jadwal" data-hari="1">
+                    <summary>Senin</summary>
+                        <p>Abyakta  |  Adhira  |  Ahmad  | Syahrul  | Raka  |  Taufiq  |  Albriano</p>
+                </details>
+                <details class="jadwal" data-hari="2">
+                    <summary>Selasa</summary>
+                        <p>Bintang | Aqila | Ardiansyah | Arifah | Septian | Sofyan | Syahid</p>
+                </details>
+                <details class="jadwal" data-hari="3">
+                    <summary>Rabu</summary>
+                        <p>Aulia Cintya | Aulia Rossi | Alvalen | Azizah | Revan | Ririn | Riska</p>
+                </details>
+                <details class="jadwal" data-hari="4">
+                    <summary>Kamis</summary>
+                        <p>Bidhary | Denia | Dwi Handika | Pratama | Hasya | Puan | Putri</p>
+                </details>
+                <details class="jadwal" data-hari="5">
+                    <summary>Jum'at</summary>
+                        <p>Herlambang | Ivo | Kelvin | Marvel | Fardan | Nova</p>
+                </details>
+            </div>
+        </section>
+
+        <br><br>
+
+        <!-- struktur -->
+        <section id="Struktur">
+            <div class="struktur">
+                <img src="../assets/images/webv1/struktur.png" alt="">
+            </div>
+            <div class="spacer"></div>
+        </section>
+
+        <br><br>
+
+        <section id="Gallery">
+            <div class="gallery">
+                <h3>Gallery Kelas</h3>
+                <div class="gallery-grid">
+                    <img src="../assets/images/webv1/foto1.jpg" alt="Gambar 1">
+                    <img src="../assets/images/webv1/foto2.jpg" alt="Gambar 2">
+                    <img src="../assets/images/webv1/foto3.jpg" alt="Gambar 3">
+                    <img src="../assets/images/webv1/foto4.jpg" alt="Gambar 4">
+                    <img src="../assets/images/webv1/foto5.jpg" alt="Gambar 5">
+                    <img src="../assets/images/webv1/foto6.jpg" alt="Gambar 6">
+                    <img src="../assets/images/webv1/foto7.jpg" alt="Gambar 7">
+                    <img src="../assets/images/webv1/foto8.jpg" alt="Gambar 8">
+                </div>
+            </div>
+        </section>
+        
+        <br><br>
+
+        <section id="media">
+            <section class="social-media-section">
+                <div class="container">
+                    <h3>Sosial Media X-TJKT-4</h3>
+                    <div class="social-media-icons">
+                        <a href="" target="_blank">
+                            <img src="../assets/images/webv1/tiktok.png"" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/xtjkt4.lanska/?igsh=MW5pbXUyZzM1NDYyZw%3D%3D" target="_blank">
+                            <img src="../assets/images/webv1/ig.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+        </section>
+
+    </main>
+    <br><br>
+
+    <footer class="footer">
+        <div class="footerconr">
+            <p>&copy;Class X-TJKT-4 2024.</p>
+        </div>
+    </footer>
+    
+    
+
+    <script src="../js/script.js"></script>
+
+
 
 </body>
 </html>
