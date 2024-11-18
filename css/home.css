@@ -1,366 +1,203 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASS X-TJKT-4</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
 
 
-header {
-    background-color: rgb(53, 52, 52);
-    color: #fff;
-    text-align: center;
-}
+    <header>
+        <div class="judul">
+        <h1>X-TJKT-4</h1>
+        <h4>Hallo Mahluk X-TJKT-4</h4>
+        <p>Selamat datang di website kelas 10 TJKT 4. Web ini berisi informasi tentang kelas, jadwal, foto kenangan, dan masih banyak lagi.</p>
+        </div>
+        <nav class="page">
+            <a href="#jadwal">Jadwal</a>
+            <a href="#Struktur">Struktur</a>
+            <a href="#Gallery">Gallery</a>
+            <a href="#media">Media</a>
+        </nav>
 
-header h1 {
-    padding: 15px;
-    font-family: cursive;
-}
-
-header h4 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-header p {
-    margin: auto;
-    width: 80%;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-header .page {
-    justify-content: space-around;
-    display: flex;
-    width: 80%;
-    margin: auto;
-    padding: 25px;
-}
-
-/* Gaya dasar untuk tautan header */
-header a {
-    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
-    color: #ff0000; /* Mengatur warna teks menjadi merah */
-    border: #ff0000 1px solid; /* Menambahkan border merah pada tautan */
-    padding: 15px; /* Menambahkan padding di sekitar teks */
-    display: inline-block; /* Memastikan padding dan animasi bekerja dengan baik */
-    transition: all 0.3s ease; /* Transisi halus untuk semua properti selama 0.3 detik */
-}
-
-/* Gaya untuk tautan saat di-hover */
-header a:hover {
-    color: #fff; /* Mengubah warna teks menjadi putih saat di-hover */
-    background: red; /* Mengubah warna latar belakang menjadi merah saat di-hover */
-}
-
-#popupBox {
-    color: #333;
-}
-
-/* Animasi tambahan dengan keyframes */
-@keyframes pulse {
-    0% {
-        transform: scale(1); /* Skala awal elemen */
-        background-color: red; /* Warna latar belakang awal */
-    }
-    50% {
-        transform: scale(1.1); /* Skala elemen menjadi lebih besar */
-        background-color: darkred; /* Warna latar belakang menjadi lebih gelap */
-    }
-    100% {
-        transform: scale(1); /* Kembali ke skala awal */
-        background-color: red; /* Warna latar belakang kembali ke merah */
-    }
-}
-
-/* Menerapkan animasi saat di-hover */
-header a:hover {
-    animation: pulse 0.6s ease-in-out; /* Menerapkan animasi pulse selama 0.6 detik */
-}
-
-#jadwal {
-    margin: auto;
-    width: 80%;
-}
-
-.jadwal {
-    border: black 1px solid;
-    padding: 5px;
-    background: #aeaeae;
-    text-align: justify;
-}
+            <!-- welcome  -->
+        <!-- Latar belakang popup -->
+        <div id="popupBackground">
+            <div id="popupBox">
+                <h1>Selamat datang di halaman utama!</h1>
+                <p>Anda berhasil login dengan NIS yang terdaftar.</p>
+                <div class="button-group">
+                    <!-- Tombol Lanjutkan -->
+                    <button onclick="continueToPage()">Lanjutkan</button>
+                    <!-- Tombol Logout -->
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
 
 
-.jadwal:hover {
-    background-color: #ff0000;
-    color: white;
-}
+    </header>
 
-.jadwal[open] {
-    background-color: black;
-    color: red;
-}
+    <main>
 
-.terpilih {
-    background-color: #90ee90; /* Hijau untuk hari terpilih */
-}
-.tidak-terpilih {
-    background-color: #ff6347; /* Merah untuk hari tidak terpilih */
-}
+        <section id="jadwal">
 
-#jadwal h2 {
-    text-align: center;
-    font-family:cursive;
-    font-weight: bold;
-    margin: 15px;
-}
+            <h2>Jadwal X-TJKT-4</h2>
 
-/* judul h3 */
+            <div class="teori">
+                <h3>Jadwal Teori</h3>
+                <details class="jadwal" data-hari="1">
+                    <summary>Senin</summary>
+                        <p>SIN [Sejarah Indonesia]</p>
+                        <p>BIG [Bahasa Inggris]</p>
+                        <p>PAB [Pendidikan Agama]</p>
+                </details>
+                <details class="jadwal" data-hari="2">
+                    <summary>Selasa</summary>
+                        <p>MAT [Matematika]</p>
+                        <p>BJW [Bahasa Jawa]</p>
+                        <p>BIN [Bahasa Indonesia]</p>
+                </details>
+                <details class="jadwal" data-hari="3">
+                    <summary>Rabu</summary>
+                        <p>BIG [Bahasa Inggris]</p>
+                        <p>MAT [Matematika]</p>
+                        <p>SBU [Seni Budaya]</p>
+                </details>
+                <details class="jadwal" data-hari="4">
+                    <summary>Kamis</summary>
+                        <p>PJOK [Pendidikan Jasmani, Olahraga, dan Kesehatan]</p>
+                        <p>Jeda Kegiatan</p>
+                        <p>BIN [Bahasa Indonesia]</p>
+                        <p>PAB [Pendidikan Agama]</p>
+                </details>
+                <details class="jadwal" data-hari="5">
+                    <summary>Jum'at</summary>
+                        <p>Jum'at Karakter</p>
+                        <p>PJOK [Pendidikan Jasmani, Olahraga, dan Kesehatan]</p>
+                        <p>PKN [Pendidikan Kewarga Negaraan]</p>
+                </details>
+            </div>
+            <div class="praktek">
+                <h3>Jadwal Praktek</h3>
+                <details class="jadwal" data-hari="1">
+                    <summary>Senin</summary>
+                        <p>PKR [Penguatan Karakter][Upacara]</p>
+                        <p>DPK [Dasar Proggram Keahlian]</p>
+                        <p>BKS [Bimbinagan Konseling]</p>
+                        <p>DPK [Dasar Proggam Keahlian]</p>
+                </details>
+                <details class="jadwal" data-hari="2"> 
+                    <summary>Selasa</summary>
+                        <p>PAS [IPA IPS]</p>
+                        <p>P-5</p>
+                        <p>DPK [Dasar Proggam Keahlian]</p>
+                        <p>PAS [IPA IPS]</p>
+                </details>
+                <details class="jadwal" data-hari="3">
+                    <summary>Rabu</summary>
+                        <p>DPK [Dasar Proggam Keahlian]</p>
+                </details>
+                <details class="jadwal" data-hari="4">
+                    <summary>Kamis</summary>
+                        <p>DPK [Dasar Proggam Keahlian</p>
+                        <p>P-5</p>
+                        <p>INF [Informatika]]</p>
+                </details>
+                <details class="jadwal" data-hari="5">
+                    <summary>Jum'at</summary>
+                        <p>Jum'at Karakter</p>
+                        <p>INF [Informatika]</p>
+                        <p>PAS [IPA IPS]</p>
+                </details>
+            </div>
+            <div class="piket">
+                <h3>Jadwal Piket</h3>
+                <details class="jadwal" data-hari="1">
+                    <summary>Senin</summary>
+                        <p>Abyakta  |  Adhira  |  Ahmad  | Syahrul  | Raka  |  Taufiq  |  Albriano</p>
+                </details>
+                <details class="jadwal" data-hari="2">
+                    <summary>Selasa</summary>
+                        <p>Bintang | Aqila | Ardiansyah | Arifah | Septian | Sofyan | Syahid</p>
+                </details>
+                <details class="jadwal" data-hari="3">
+                    <summary>Rabu</summary>
+                        <p>Aulia Cintya | Aulia Rossi | Alvalen | Azizah | Revan | Ririn | Riska</p>
+                </details>
+                <details class="jadwal" data-hari="4">
+                    <summary>Kamis</summary>
+                        <p>Bidhary | Denia | Dwi Handika | Pratama | Hasya | Puan | Putri</p>
+                </details>
+                <details class="jadwal" data-hari="5">
+                    <summary>Jum'at</summary>
+                        <p>Herlambang | Ivo | Kelvin | Marvel | Fardan | Nova</p>
+                </details>
+            </div>
+        </section>
 
-.teori h3, .praktek h3, .piket h3, .struktur h3 ,.gallery h3{
-    text-align: center;
-    font-family:cursive;
-    font-weight: bold;
-    margin: 15px;
-}
+        <br><br>
 
-/* Animasi fade-in untuk .jadwal */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        <!-- struktur -->
+        <section id="Struktur">
+            <div class="struktur">
+                <img src="../assets/images/webv1/struktur.png" alt="">
+            </div>
+            <div class="spacer"></div>
+        </section>
 
-/* Terapkan animasi pada elemen .jadwal */
-.jadwal {
-    opacity: 0; /* Awalnya tersembunyi */
-    animation: fadeIn 0.5s ease forwards; /* Terapkan animasi */
-    margin: 10px 0; /* Tambahkan margin untuk pemisah */
-}
+        <br><br>
 
-/* Menerapkan delay untuk setiap .jadwal */
-.jadwal:nth-child(1) {
-    animation-delay: 0.5s; /* Muncul setelah 0.5 detik */
-}
-.jadwal:nth-child(2) {
-    animation-delay: 1s; /* Muncul setelah 1 detik */
-}
-.jadwal:nth-child(3) {
-    animation-delay: 1.5s; /* Muncul setelah 1.5 detik */
-}
-.jadwal:nth-child(4) {
-    animation-delay: 2s; /* Muncul setelah 2 detik */
-}
-.jadwal:nth-child(5) {
-    animation-delay: 2.5s; /* Muncul setelah 2.5 detik */
-}
-.jadwal:nth-child(6) {
-    animation-delay: 3s; /* Muncul setelah 3 detik */
-}
-.jadwal:nth-child(7) {
-    animation-delay: 3.5s; /* Muncul setelah 3.5 detik */
-}
-.jadwal:nth-child(8) {
-    animation-delay: 4s; /* Muncul setelah 3.5 detik */
-}
-.jadwal:nth-child(9) {
-    animation-delay: 4.5s; /* Muncul setelah 3.5 detik */
-}
-.jadwal:nth-child(10) {
-    animation-delay: 5s; /* Muncul setelah 3.5 detik */
-}
+        <section id="Gallery">
+            <div class="gallery">
+                <h3>Gallery Kelas</h3>
+                <div class="gallery-grid">
+                    <img src="../assets/images/webv1/foto1.jpg" alt="Gambar 1">
+                    <img src="../assets/images/webv1/foto2.jpg" alt="Gambar 2">
+                    <img src="../assets/images/webv1/foto3.jpg" alt="Gambar 3">
+                    <img src="../assets/images/webv1/foto4.jpg" alt="Gambar 4">
+                    <img src="../assets/images/webv1/foto5.jpg" alt="Gambar 5">
+                    <img src="../assets/images/webv1/foto6.jpg" alt="Gambar 6">
+                    <img src="../assets/images/webv1/foto7.jpg" alt="Gambar 7">
+                    <img src="../assets/images/webv1/foto8.jpg" alt="Gambar 8">
+                </div>
+            </div>
+        </section>
+        
+        <br><br>
 
-/* sturktur */
+        <section id="media">
+            <section class="social-media-section">
+                <div class="container">
+                    <h3>Sosial Media X-TJKT-4</h3>
+                    <div class="social-media-icons">
+                        <a href="" target="_blank">
+                            <img src="../assets/images/webv1/tiktok.png"" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/xtjkt4.lanska/?igsh=MW5pbXUyZzM1NDYyZw%3D%3D" target="_blank">
+                            <img src="../assets/images/webv1/ig.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+        </section>
 
-#Struktur {
-    background-image: url(../img/struktur.png);
-    background-size: cover;  /* Memastikan gambar mengisi seluruh elemen */
-    background-position: center;  /* Memposisikan gambar di tengah */
-    margin: auto;
-    text-align: center;
-    width: 80%;
-    border: 1px solid black;
-}
+    </main>
+    <br><br>
 
-#Struktur img {
-    display: flex;
-    margin: auto;
-    width: 80%;
-    text-align: center;
-    opacity: 0;
-    padding: 25px 0px;
-}
+    <footer class="footer">
+        <div class="footerconr">
+            <p>&copy;Class X-TJKT-4 2024.</p>
+        </div>
+    </footer>
+    
+    
 
-#Struktur {
-    opacity: 0;  /* Mulai dari transparan */
-    transform: translateY(20px);  /* Menggeser elemen ke bawah */
-    animation: fadeInUp 7.5s forwards;  /* Memanggil animasi saat dimuat */
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;  /* Menjadi terlihat */
-        transform: translateY(0);  /* Kembali ke posisi normal */
-    }
-}
-
-.stuktur {
-    text-align: center;
-    padding: 50px 0;  /* Memberikan padding pada elemen */
-}
-
-/* galery */
+    <script src="../js/script.js"></script>
 
 
 
-.gallery {
-    margin: auto;
-    text-align: center;  /* Menyelaraskan teks ke tengah */
-    width: 80%;
-}
-
-.gallery h3 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Grid responsif */
-    gap: 15px;  /* Jarak antar gambar */
-}
-
-.gallery-grid img {
-    width: 100%;  /* Gambar mengisi lebar grid */
-    height: auto;  /* Mempertahankan rasio aspek */
-    border-radius: 10px;  /* Sudut gambar membulat */
-    opacity: 0;  /* Mulai dari transparan */
-    transform: translateY(20px);  /* Menggeser gambar ke bawah */
-    animation: fadeInUp 0.5s forwards;  /* Memanggil animasi saat dimuat */
-}
-
-/* Delay animasi untuk setiap gambar */
-.gallery-grid img:nth-child(1) { animation-delay: 0.1s; }
-.gallery-grid img:nth-child(2) { animation-delay: 0.2s; }
-.gallery-grid img:nth-child(3) { animation-delay: 0.3s; }
-.gallery-grid img:nth-child(4) { animation-delay: 0.4s; }
-.gallery-grid img:nth-child(5) { animation-delay: 0.5s; }
-.gallery-grid img:nth-child(6) { animation-delay: 0.6s; }
-.gallery-grid img:nth-child(7) { animation-delay: 0.7s; }
-.gallery-grid img:nth-child(8) { animation-delay: 0.8s; }
-.gallery-grid img:nth-child(9) { animation-delay: 0.9s; }
-.gallery-grid img:nth-child(10) { animation-delay: 1.0s; }
-.gallery-grid img:nth-child(11) { animation-delay: 1.1s; }
-.gallery-grid img:nth-child(12) { animation-delay: 1.2s; }
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;  /* Menjadi terlihat */
-        transform: translateY(0);  /* Kembali ke posisi normal */
-    }
-}
-
-
-/* media */
-
-.social-media-section {
-    background-color: white;  /* Warna latar belakang */
-    color: black;  /* Warna teks */
-    padding: 20px 0;
-    text-align: center;  /* Menyelaraskan teks ke tengah */
-    width: 80%;
-    margin: auto;
-    font-size: 25px;
-    border: black 1px solid;
-}
-
-.social-media-section h3 {
-    margin-bottom: 15px;
-}
-
-.social-media-icons {
-    display: flex;
-    justify-content: center;  /* Memusatkan ikon */
-    flex-wrap: wrap;  /* Membuat ikon responsif */
-    gap: 55px;  /* Jarak antar ikon */
-}
-
-.social-media-icons a img {
-    width: 150px;  /* Ukuran ikon */
-    height: 150px;
-    transition: transform 0.3s;
-}
-
-.social-media-icons a img:hover {
-    transform: scale(1.1);  /* Membesar saat hover */
-    background-color: #aeaeae;
-    border-radius: 40px;
-}
-
-.container {
-    max-width: 800px;  /* Lebar maksimum kontainer */
-    margin: auto;  /* Memusatkan kontainer */
-    padding: 0 20px;  /* Jarak horizontal dalam kontainer */
-}
-
-.footer {
-    background-color: #333;  /* Warna latar belakang */
-    color: white;  /* Warna teks */
-    padding: 50px 0px;  /* Jarak vertikal */
-    text-align: center;  /* Menyelaraskan teks ke tengah */
-    position: relative;  /* Mengatur posisi */
-    bottom: 0;  /* Menempel di bagian bawah */
-    width: 100%;  /* Lebar penuh */
-}
-
-.footercon {
-    max-width: 800px;  /* Lebar maksimum kontainer */
-    margin: auto;  /* Memusatkan kontainer */
-    padding: 0 20px;  /* Jarak horizontal dalam kontainer */
-}
-
-/* Gaya untuk latar belakang popup */
-#popupBackground {
-    display: none; /* Default disembunyikan */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
-    z-index: 9999;
-}
-/* Gaya untuk kotak popup */
-#popupBox {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 500px;
-}
-/* Gaya untuk tombol */
-#popupBox button {
-    background-color: #4CAF50; /* Warna hijau */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    width: 100%; /* Lebar tombol penuh */
-}
-#popupBox button:hover {
-    background-color: #45a049;
-}
-/* Spasi antara tombol */
-#popupBox .button-group button {
-    margin-bottom: 10px;
-}
+</body>
+</html>
