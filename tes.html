@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Utama</title>
+    <style>
+        /* Gaya untuk latar belakang popup */
+        #popupBackground {
+            display: none; /* Default disembunyikan */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+            z-index: 9999;
+        }
+
+        /* Gaya untuk kotak popup */
+        #popupBox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        /* Gaya untuk tombol */
+        #popupBox button {
+            background-color: #4CAF50; /* Warna hijau */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%; /* Lebar tombol penuh */
+        }
+
+        #popupBox button:hover {
+            background-color: #45a049;
+        }
+
+        /* Spasi antara tombol */
+        #popupBox .button-group button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Latar belakang popup -->
+    <div id="popupBackground">
+        <div id="popupBox">
+            <h1>Selamat datang di halaman utama!</h1>
+            <p>Anda berhasil login dengan NIS yang terdaftar.</p>
+            <div class="button-group">
+                <!-- Tombol Lanjutkan -->
+                <button onclick="continueToPage()">Lanjutkan</button>
+                <!-- Tombol Logout -->
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk menampilkan popup
+        function showPopup() {
+            document.getElementById('popupBackground').style.display = 'block';
+        }
+
+        // Fungsi untuk logout
+        function logout() {
+            window.location.href = '../index.html'; // Arahkan kembali ke halaman login
+        }
+
+        // Fungsi untuk melanjutkan ke halaman utama
+        function continueToPage() {
+            document.getElementById('popupBackground').style.display = 'none'; // Tutup popup
+        }
+
+        // Menampilkan popup saat halaman dimuat
+        window.onload = function () {
+            showPopup();
+        };
+    </script>
+</body>
+</html>
